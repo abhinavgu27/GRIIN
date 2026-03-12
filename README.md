@@ -17,3 +17,5 @@ Database: PostgreSQL
 Cloud Infrastructure: AWS / Google Cloud Platform (GCP)
 
 AI/ML: Custom Road Assessment Models
+
+Copyright © 2026 Abhinav. All rights reserved.
