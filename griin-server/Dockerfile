@@ -3,6 +3,10 @@ FROM eclipse-temurin:17-jdk-jammy AS build
 WORKDIR /app
 # Copy only the files needed for the build
 COPY . .
+
+# Grant execution permission to the Gradle wrapper
+RUN chmod +x ./gradlew
+
 # Run the Gradle build (skip tests to save time on Render)
 RUN ./gradlew bootJar --no-daemon -x test
 
