@@ -23,7 +23,7 @@ interface GRIINApiService {
 
 object RetrofitClient {
     // Production endpoint on Railway
-    private const val BASE_URL = "https://griin-server-production.up.railway.app/"
+    private const val BASE_URL = "https://griin-server-abhinav.onrender.com/"
 
     val apiService: GRIINApiService by lazy {
         Retrofit.Builder()
