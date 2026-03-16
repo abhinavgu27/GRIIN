@@ -1,5 +1,5 @@
 # Stage 1: Build the application using Gradle
-FROM eclipse-temurin:17-jdk-jammy AS build
+FROM eclipse-temurin:21-jdk-jammy AS build
 WORKDIR /app
 # Copy only the files needed for the build
 COPY . .
@@ -11,7 +11,7 @@ RUN chmod +x ./gradlew
 RUN ./gradlew bootJar --no-daemon -x test
 
 # Stage 2: Run the application
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 # Copy the built jar file from the build stage
 COPY --from=build /app/build/libs/*.jar app.jar
